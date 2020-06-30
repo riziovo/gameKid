@@ -1,83 +1,97 @@
 
 <html>
 
-    <head>
-    <style>
+  <head>
+  <style>
 body {
-        background-color: black;
-      }
-    .background    { 
-      /* background: rgb(52, 166, 251); */
-      /* background-color: black; */
-      position:relative;
-      background-color: rgb(240, 240, 240);
-                     table-layout: fixed;
-                     border-spacing: 0;  
-                     }
-    .background td { padding: 0;                     }
-    .water          { background: rgb(52, 166, 251); }
-    .earth         { background: #773116;              }
-    .grass {background: #2ecc71;}
-    .Off {
-      box-shadow: -4px -7px 8px rgb(60, 64, 264), 4px -7px 8px rgb(60, 64, 264);
+      background-color: black;
     }
-    .Missile {
-      background-image: url(flame.png);
-      background-color: transparent;
-      z-index: 100;
-      background-size: contain;
-      background-repeat: no-repeat;
-       /* background: red; */
+  .background    { 
+    /* background: rgb(52, 166, 251); */
+    /* background-color: black; */
+    position:relative;
+    background-color: rgb(240, 240, 240);
+                   table-layout: fixed;
+                   border-spacing: 0;  
+                   }
+  .background td { padding: 0;                     }
+  .water          { background: rgb(52, 166, 251); }
+  .earth         { background: #773116;              }
+  .grass {background: #2ecc71;}
+  .Off .Player {
+    box-shadow: -4px -7px 8px rgb(60, 64, 264), 4px -7px 8px rgb(60, 64, 264);
+  }
+  .Missile {
+    background-image: url(flame.png);
+    background-color: transparent;
+    z-index: 100;
+    background-size: contain;
+    background-repeat: no-repeat;
+     /* background: red; */
+     }
+  .won .Player {
+    box-shadow: -4px -7px 8px white, 4px -7px 8px white;
+  }
+  .Actors  { position: absolute;            }
+  .Gem   { 
+    background-image: url(gem.png);
+    background-color: transparent;
+    z-index: 100;
+    background-size: cover;
+    /* background: rgb(142, 89, 241); */
+     }
+  .Player { 
+    background-image: url(androidos.png);
+    background-color: transparent;
+    z-index: 100;
+    background-size: cover;
+    border-radius: 12px;
+    /* background: rgb(64, 64, 64); */
        }
-    .won .Player {
-      box-shadow: -4px -7px 8px white, 4px -7px 8px white;
-    }
-    .Actors  { position: absolute;            }
-    .Gem   { 
-      background-image: url(gem.png);
-      background-color: transparent;
-      z-index: 100;
-      background-size: cover;
-      /* background: rgb(142, 89, 241); */
-       }
-    .Player { 
-      background-image: url(androidos.png);
-      background-color: transparent;
-      z-index: 100;
-      background-size: contain;
-	background-repeat:no-repeat;
-	padding: 0;
-	margin: 0;
-	border: 0;
-      border-radius: 12px;
-      /* background: rgb(64, 64, 64); */
-         }
-    .gameBoard {
-      overflow: hidden;
-      max-width: 1300px;
-      max-height: 650px;
-      position: relative;
-    }
-    
-    .Life {
-      background: #fff;
-      top:16px;
-      left:16px;
-      display:flex; 
-      flex-flow:row wrap;
-    }
-    .bar {
-      margin:1px 3px; 
-      background: red;
-    }
+  .gameBoard {
+    overflow: hidden;
+    max-width: 1300px;
+    max-height: 650px;
+    position: relative;
+  }
+  
+  .Life {
+    background: #fff;
+    top:16px;
+    left:16px;
+    display:flex; 
+    flex-flow:row wrap;
+  }
+  .bar {
+    margin:1px 3px; 
+    background: red;
+  }
 
-    </style>  
-    </head>
-    <script src="gameKidMechanics.js"></script>
-    <script src="gameLevel.js"></script>
-    <body>
-        <script>
-            runGame(gameLevel, gameDisplay);
-          </script>
-    </body>
-    </html>
+  .board{
+  }
+
+  .row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .block{
+    flex: 1;
+  }
+
+  .Void{
+    background: white;
+  }
+
+  </style>  
+  </head>
+  <script src="gameKidMechanics.js"></script>
+  <script src="gameLevel.js"></script>
+  <body>
+      <script>
+          runGame(gameLevel, gameDisplay);
+        </script>
+  </body>
+  </html>
